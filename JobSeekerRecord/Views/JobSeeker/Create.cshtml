@@ -1,0 +1,108 @@
+﻿@model JobSeekerRecord.Models.JobSeekerModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>JobSeekerModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+              
+                <select asp-for="Gender" class="form-control">
+                    <option value="Option 1">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  
+
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DOB" class="control-label"></label>
+                <input asp-for="DOB" class="form-control" />
+                <span asp-validation-for="DOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GraduationYear" class="control-label"></label>
+                <input asp-for="GraduationYear" class="form-control" />
+                <span asp-validation-for="GraduationYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseStudied" class="control-label"></label>
+                <input asp-for="CourseStudied" class="form-control" />
+                <span asp-validation-for="CourseStudied" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GraduatedWith" class="control-label"></label>
+               
+                <select asp-for="GraduatedWith" class="form-control">
+                    <option value="Option 1">Grade</option>
+                    <option value="First Class">First Class</option>
+                    <option value="Second Class Upper">Second Class Upper</option>
+                    <option value="Second Class Lower">Second Class lower</option>
+                    <option value="Third Class">Third Class</option>
+                    <option value="Pass">Pass</option>
+
+                </select>
+                <span asp-validation-for="GraduatedWith" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Speclization" class="control-label"></label>
+               
+                <select asp-for="Speclization" class="form-control">
+                    <option value="Option 1">Select Area</option>
+                    <option value="ICT">ICT</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Oil and Gas">Oil and Gas</option>
+
+                </select>
+                <span asp-validation-for="Speclization" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hobbies" class="control-label"></label>
+                <input asp-for="Hobbies" class="form-control" />
+                <span asp-validation-for="Hobbies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
